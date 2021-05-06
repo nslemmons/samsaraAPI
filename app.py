@@ -10,5 +10,9 @@ def home():
 def samsara():
     return render_template('samsara.html')
 
+@app.route('/example')
+def example():
+    return render)template('example.html)
+
 if __name__ == ('__main__'):
     app.run(debug=True)
