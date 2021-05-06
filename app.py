@@ -12,7 +12,7 @@ def samsara():
 
 @app.route('/example')
 def example():
-    return render)template('example.html)
+    return render)template('example.html')
 
 if __name__ == ('__main__'):
     app.run(debug=True)
