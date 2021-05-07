@@ -10,6 +10,16 @@
     
     <h1> Samsara API Endpoints </h1>
     <p> This page will be used to launch endpoint requests hopefully. </p>
+	
+    <form method ="POST">
+	<input apiKey="apiKey">
+    </form>
+
+    {% row = 0 %}
+    {% for driver in response["data"] %}
+	<div>{{response["data"][row]["name"]}}</div>
+        {% row +=1 %}
+    {% endfor %}
       
     {% endblock %}
   </body>
