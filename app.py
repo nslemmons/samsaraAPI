@@ -11,20 +11,7 @@ def home():
 
 @app.route('/samsara, methods=[POST]')
 def samsara():
-
-    var = request.form['POST']
-
-    url = "https://api.samsara.com/fleet/drivers"
-
-    headers = {"Accept": "application/json","Authorization": ""}
-
-    headers.update(Authorization="Bearer "+var)
-
-    params = {'driverActivationStatus':'active'}
-
-    response = requests.request("GET", url, headers=headers, params=params).json()
-    
-    return render_template('samsara.html', response)
+    return render_template('samsara.html')
     
 
 @app.route('/example')
