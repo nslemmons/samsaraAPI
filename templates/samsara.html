@@ -14,13 +14,7 @@
     <form method ="POST">
 	<input apiKey="apiKey">
     </form>
-
-    {% row = 0 %}
-    {% for driver in response["data"] %}
-	<div>{{response["data"][row]["name"]}}</div>
-        {% row +=1 %}
-    {% endfor %}
-      
+     
     {% endblock %}
   </body>
 </html>
