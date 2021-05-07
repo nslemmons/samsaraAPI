@@ -9,7 +9,7 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/samsara, methods=[POST]')
+@app.route('/samsara', methods='[POST]')
 def samsara():
     return render_template('samsara.html')
     
