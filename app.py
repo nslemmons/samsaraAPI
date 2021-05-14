@@ -17,7 +17,7 @@ def samsara():
     else:
         return render_template('samsara.html')
 
-@app.route('/authenticated/<apiKey>')
+@app.route('/authenticated')
 def auth(apiKey):
     return 'API key authenticated: %s' %apiKey
 
