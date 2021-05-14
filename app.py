@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template, request
 import requests
 import json
 
@@ -11,7 +11,15 @@ def home():
 
 @app.route('/samsara', methods=['POST', 'GET'])
 def samsara():
-    return render_template('samsara.html')
+    if request.method == 'POST':
+        apiKey = request.form['apiKey']
+        return redirect(url_for('authenticated',apiKey = apiKey))
+    else:
+        return render_template('samsara.html')
+
+@app.route('/authenticated/<apiKey>')
+def auth(apiKey):
+    return 'API key authenticated: %s' %apiKey
 
 @app.route('/example')
 def example():
